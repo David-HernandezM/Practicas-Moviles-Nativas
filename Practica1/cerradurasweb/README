@@ -1,0 +1,20 @@
+Para ejecutar nuestro programa debemos localizar primero la carpeta en la que se encuentra nuestro "servidor"
+
+1. Localizar carpeta C:\RepositoriosGit\Practicas-Moviles-Nativas\Practica1\cerradurasweb (esto puede variar de acuerdo a la localizacion de tu computadora)
+2. Abrir el cmd
+3. Ejecuta los siguientes comandos 
+    mvn clean
+    mvn install
+    mvn spring-boot:run
+NOTA: Asegurarse de tener instalado maven
+
+4. Abrir el servidor en http://localhost:8080/cerradura para ver la pagina
+5. Para ver la api http://localhost:8080/api/cerradura/estrella/1
+
+
+
+PARA EJECUTAR LA APLICACION DE ANDROID STUDIO
+1.Abrir el emulador de android studio
+2. Ejecutar el MainActivity.kt
+3. Abrir la aplicacion, y dar click en el boton de la aplicacion que nos enviara a la pagina web
+La aplicacion nos enviara a la pagina de la cerradura
