@@ -11,7 +11,7 @@
 
 <body>
     <div class="container mt-4">
-        <h1 class="text-center">Resultados para n =</h1>
+        <h1 class="text-center">Resultados para n = <span th:text="${numero}"></span></h1>
         <div class="row justify-content-center mt-4">
             <div class="col-md-6 col-sm-12">
                 <h2>Cerradura de Kleene</h2>
@@ -22,13 +22,14 @@
 
                 <!--Formulario para cambiar el valor de n -->
 
-                <form action="/cerradura" method="get" class="mt-4">
+                <form action="/cerradura" method="get">
                     <div class="mb-3">
-                        <label for="inputN" class="form-label">Cambiar el valor de N</label>
-                        <input type="number" class="form-control" id="inputN" placeholder="Ingrese un valor para n"/>
+                        <label for="inputN" class="form-label">Valor de N</label>
+                        <input type="number" class="form-control" id="inputN" name="n" placeholder="Ingrese un valor para n"/>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Guardar</button>
+                    <button type="submit" class="btn btn-primary w-100">Obtener</button>
                 </form>
+                
             </div>
         </div>
     </div>

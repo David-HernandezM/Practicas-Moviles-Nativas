@@ -10,37 +10,38 @@ import mx.ipn.cerradurasweb.modelo.CerraduraService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
 @Controller
 @RequestMapping("/cerradura")
 public class VistaController {
 
     private final CerraduraService cerradurasService;
 
-    public VistaController(CerraduraService cerradurasService){
+    public VistaController(CerraduraService cerradurasService) {
         this.cerradurasService = cerradurasService;
     }
-    
 
-    //Manejo de vista principal para ingresar "n"
+    // Manejo de vista principal para ingresar "n"
     @GetMapping("/")
     public String mostrarFormulario() {
-        return "formulario"; //Cargar la vista formulario.html
+        return "formulario"; // Cargar la vista formulario.html
     }
 
-    //Manejo de vista con Thymeleaf para mostrar los resultados
+    // Manejo de vista con Thymeleaf para mostrar los resultados
     @GetMapping
-    public String mostrarCerraduras(@RequestParam("n") int n, Model model) {
-        //Obtener los resultados de la cerradura de Kleene y positiva
+    public String mostrarCerraduras(@RequestParam(name = "n", required = false) Integer n, Model model) {
+        if (n == null || n <= 0 || n >= 8) {
+            model.addAttribute("error", "El valor de 'n' debe estar entre 1 y 7.");
+            return "formulario"; // Redirige al formulario si 'n' es inválido
+        }
+
         Map<String, String> kleene = cerradurasService.kleeneCerradura(n);
         Map<String, String> positiva = cerradurasService.kleeneClausuraPositiva(n);
-        
-        //Pasar los resultados al modelo para Thymeleaf
-        model.addAttribute("numero",n);
-        model.addAttribute("kleene",kleene.get("Σ^*"));
+
+        model.addAttribute("numero", n);
+        model.addAttribute("kleene", kleene.get("Σ^*"));
         model.addAttribute("positiva", positiva.get("Σ^+"));
 
-        //Devolver la vista Thymeleaf 'cerradura.html'
         return "cerradura";
     }
+
 }
