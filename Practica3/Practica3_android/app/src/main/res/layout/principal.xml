@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondopantalla">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/bienvenido_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bienvenido_a"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bit"
+            android:layout_gravity="center" />
+        <TextView
+            android:id="@+id/iniciosesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/paranoid_android"
+            android:textSize="40sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bit"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/buttonlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#65BA8C"
+            android:fontFamily="@font/bit"
+            android:layout_marginTop="30dp"
+            android:textSize="25sp"
+            android:textAllCaps="false"
+            android:text="@string/iniciarsesion" />
+
+        <Button
+            android:id="@+id/buttonregister"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4D94A0"
+            android:text="@string/registrarse"
+            android:fontFamily="@font/bit"
+            android:textSize="25sp"
+            android:textAllCaps="false"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:id="@+id/imagenperro"
+            android:layout_width="wrap_content"
+            android:layout_height="254dp"
+            android:src="@drawable/perro" />
+
+
+    </LinearLayout>
+</RelativeLayout>
