@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/vista.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Botón de Cerrar Sesión -->
+        <!-- <div style="text-align: right;">
+            <button id="logoutBtn" class="btn-danger" onclick="logout()">Cerrar Sesión</button>
+        </div> -->
+        <form action="/user/logout" method="post">
+            <div style="text-align: right;">
+                <button type="submit" id="logoutBtn" class="btn-danger">Cerrar Sesión</button>
+            </div>
+        </form>
+<div class="container">
+    <h2>Gestión de Usuarios</h2>
+
+    <form action="/admin/createuser" method="post">
+        <div id="createUser" class="form-group">
+            <h3>Crear Usuario</h3>
+            <% if ( createUserError ) { %>
+                <p class="error-message"><%= createUserError %></p>
+            <% } %>
+            <% if ( createUserMessage ) { %>
+                <p class="success-message"><%= createUserMessage %></p>
+            <% } %>
+            <input type="text" id="nombre" name="name" placeholder="Nombre" required>
+            <input type="text" id="apellidoP" name="apellidoP" placeholder="Apellido Paterno" required>
+            <input type="text" id="apellidoM" name="apellidoM" placeholder="Apellido Materno" required>
+            <input type="email" id="correo" name="correo" placeholder="Correo" required>
+            <input type="text" id="userU" name="username" placeholder="Usuario" required>
+            <input type="password" id="passwordU" name="password" placeholder="Contraseña" required>
+            <input type="number" id="edad" name="edad" placeholder="Edad" required>
+            <select id="genero" name="genero" required>
+                <option value="">Seleccionar Género</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+            </select>
+            <button id="createBtn">Crear Usuario</button>
+        </div>
+    </form>
+
+
+    <form action="/admin/userinfo" method="get">
+        <div id="readUser" class="form-group">
+            <h3>Buscar Usuario</h3>
+            <input name="userdata" type="text" id="searchQuery" placeholder="Buscar por ID, Nombre o Usuario" required>
+            <button id="searchBtn" type="submit">Buscar</button>
+            <% if (showUsersInfo) { %>
+                <div class="result" id="searchResult">
+                    <% if ( usersInfo.length != 0 ) { %>
+                        <% usersInfo.forEach(user => { %>
+                            <div class="user-info">
+                                <p>Usuario:</p>
+                                <label for="">Id de usuario:</label>
+                                <input value="<%= user.id_usuario %>" readonly>
+                                <label for="">Nombre:</label>
+                                <input value="<%= user.nombre %>" readonly>
+                                <label for="">Apellido paterno:</label>
+                                <input value="<%= user.apellidoP %>" readonly>
+                                <label for="">Apellido materno:</label>
+                                <input value="<%= user.apellidoM %>" readonly>
+                                <label for="">Correo:</label>
+                                <input value="<%= user.correo %>" readonly>
+                                <label for="">Username:</label>
+                                <input value="<%= user.userU %>" readonly>
+                                <label for="">Edad:</label>
+                                <input value="<%= user.edad%>"readonly>
+                                <label for="">Genero:</label>
+                                <select readonly>
+                                    <option value="<%= user.genero %>"><%= user.genero %></option>
+                                </select>
+                            </div>
+                        <% }) %>
+                    <% } else { %>
+                        <p>No se encontraton usuarios</p>
+                    <% } %>
+                </div>
+            <% } %>
+        </div>
+    </form>
+
+    <form action="/admin/updateuser" method="post">
+        <div id="updateUser" class="form-group">
+            <h3>Actualizar Usuario</h3>
+            <% if ( updateUserError ) { %>
+                <p class="error-message"><%= updateUserError %></p>
+            <% } %>
+            <% if ( updateUserMessage ) { %>
+                <p class="success-message"><%= updateUserMessage %></p>
+            <% } %>
+            <input type="number" id="updateId" name="userId" placeholder="ID del Usuario" required>
+            <input type="text" id="updateNombre" name="userNombre" placeholder="Nuevo Nombre">
+            <input type="text" id="updateApellidoP" name="userApellidoP" placeholder="Nuevo Apellido Paterno">
+            <input type="text" id="updateApellidoM" name="userApellidoM" placeholder="Nuevo Apellido Materno">
+            <input type="email" id="updateCorreo" name="userCorreo" placeholder="Nuevo Correo">
+            <input type="text" id="updateUserU" name="userUsername" placeholder="Nuevo Usuario">
+            <input type="number" id="updateEdad" name="userEdad" placeholder="Nueva Edad">
+            <select id="updateGenero" name="userGenero">
+                <option value="">Seleccionar Nuevo Género</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+            </select>
+            <button id="updateBtn" type="submit">Actualizar Usuario</button>
+        </div>
+    </form>
+
+
+    <form action="/admin/deleteuser" method="post">
+        <div id="deleteUser" class="form-group">
+            <h3>Eliminar Usuario</h3>
+            <% if ( deleteUserError ) { %>
+                <p class="error-message"><%= deleteUserError %></p>
+            <% } %>
+            <% if ( deleteUserMessage ) { %>
+                <p class="success-message"><%= deleteUserMessage %></p>
+            <% } %>
+            <input type="number" id="deleteId" name="userId" placeholder="ID del Usuario" required>
+            <button class="btn-danger" id="deleteBtn" type="submit">Eliminar Usuario</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

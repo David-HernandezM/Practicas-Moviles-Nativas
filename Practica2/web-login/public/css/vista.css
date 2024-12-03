@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    text-align: center;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-top: 10px;
+}
+input, select {
+    max-width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #4cae4c;
+}
+.btn-danger {
+    background-color: #d9534f;
+}
+.btn-danger:hover {
+    background-color: #c9302c;
+}
+.result {
+    margin-top: 20px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.btn-options-container {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.button-submit--update {
+    margin-top: 20px;
+}
+
+.error-update__message {
+    margin: 0;
+    color: rgb(235, 0, 0);
+}
+
+.success-update__message {
+    margin: 0;
+    color: rgb(86, 204, 31);
+}
+
