@@ -1,5 +1,75 @@
 <resources>
-   
+    <string name="app_name">Practica2</string>
+    <string name="password_hint">Ingresa tu password</string>
+    <string name="datos_hint">Ingresa tus datos</string>
+    <string name="nombreusuario_hint">Nombre de usuario</string>
+    <string name="password">Password</string>
+    <string name="edad">Edad</string>
+    <string name="genero">Genero</string>
+    <string name="correoe">Correo electronico</string>
+    <string name="nombre">Nombre</string>
+    <string name="aPaterno">Apellido Paterno</string>
+    <string name="aMaterno">Apellido Materno</string>
+    <string name="ingdatos">Ingresa tus datos para registrarte</string>
+
+    <string name="iniciarsesion">Iniciar Sesion</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="atras">atras </string>
+    <string name="title_activity_login">Iniciar Sesion</string>
+    <string name="title_activity_register">Registrarse</string>
+    <string name="buttonsend">Enviar</string>
+    <string name="bienvenidousuario">Bienvenido Usuario</string>
+    <string name="modificadatos">Modifica tus datos</string>
+    <string name="bienvenidoadmin">Bienvenido Administrador</string>
+    <string name="consultausuarios">Consulta usuarios</string>
+    <string name="deleteusuario">Elimina un usuario</string>
+    <string name="id_usuario">ID_usuario</string>
+
+
+    <string name="title_activity_admin_vista_layouts">AdminVistaLayoutsActivity</string>
+    <string name="title_activity_vista_usuario_layouts">VistaUsuarioActivityLayouts</string>
+    <string name="title_activity_vista_admin_layouts">VistaAdminActivityLayouts</string>
+    <string name="title_activity_button">ButtonActivity</string>
+    <string name="title_activity_create_user">CreateUserActivity</string>
+    <string name="title_activity_update_user">UpdateUserActivity</string>
+    <string name="title_activity_read_user">ReadUserActivity</string>
+    <string name="title_activity_delete_user">DeleteUserActivity</string>
+    <string name="eliminar_usuario">Eliminar usuario</string>
+    <string name="leer_datos">Leer datos</string>
+    <string name="cambiar_datos_de_usuario">Cambiar datos de usuario</string>
+    <string name="crear_usuario">crear usuario</string>
+    <string name="title_activity_vista_usuario">VistaUsuarioActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+
+    <string name="title_activity_vista_admin">VistaAdminActivity</string>
+    <string name="elige">Elige una operacion</string>
+    <string name="buttonread">Buscar usuarios</string>
+    <string name="actualizardatos">Actualizar datos</string>
+    <string name="cerrarsesion">Cerrar sesion</string>
+    <string name="elige_una_actividad">Elige una actividad</string>
+    <string name="inicia_sesion_en_el_navegador">Inicia sesion en el navegador</string>
+    <string name="formulario_de_crear_usuario">Formulario de Crear Usuario</string>
+    <string name="proyecto">proyecto</string>
+    <string name="agregarimagen">agregarimagen</string>
+    <string name="usuario">Usuario</string>
+    <string name="administrador">Administrador</string>
+    <string name="coloca_al_usuario_al_que_deseas_cambiar_los_datos">Coloca al usuario al que deseas cambiar los datos</string>
+    <string name="cambia_los_datos">Cambia los datos</string>
+    <string name="title_activity_update_only_user">UpdateOnlyUserActivity</string>
+    <string name="imagen_de_usuario">Imagen de usuario</string>
+    <string name="id_usuariotexto">ID Usuario:</string>
+    <string name="title_activity_cerrar_sesion">CerrarSesionActivity</string>
+    <string name="paranoid_android">Paranoid Android</string>
+    <string name="bienvenido_a">Bienvenido a</string>
+    <string name="title_activity_webvieweruser">webvieweruser</string>
+
+
     <!-- Admin vista -->
 
 
