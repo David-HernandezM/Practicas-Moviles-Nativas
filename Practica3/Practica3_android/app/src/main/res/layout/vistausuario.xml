@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondouser">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingDefaultResource,UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingDefaultResource">
+
+
+            <TextView
+                android:id="@+id/bienvenidousuario"
+                android:layout_width="316dp"
+                android:layout_height="98dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/bit"
+                android:gravity="center"
+                android:text="@string/bienvenidousuario"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/eligeactividad"
+                android:layout_width="316dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/elige_una_actividad"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/bit"/>
+
+            <TextView
+                android:id="@+id/textViewIdUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/id_usuariotexto"
+                android:textSize="27sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/bit"
+                android:layout_marginTop="30dp"
+                android:padding="8dp"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@android:drawable/ic_menu_camera"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:contentDescription="@string/imagen_de_usuario"
+                android:scaleType="centerCrop" />
+
+            <Button
+                android:id="@+id/buttoncreate"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#9C27B0"
+                android:text="@string/modificadatos"
+                android:layout_marginTop="80dp"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bit"/>
+
+            <Button
+                android:id="@+id/buttonweb"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#3F51B5"
+                android:text="@string/inicia_sesion_en_el_navegador"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bit"/>
+
+            <Button
+                android:id="@+id/updateuser"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#009688"
+                android:text="@string/proyecto"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bit"/>
+
+            <Button
+                android:id="@+id/cerrarsesion"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E91E63"
+                android:text="@string/cerrarsesion"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:fontFamily="@font/bit"
+                android:textColor="@color/white"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
