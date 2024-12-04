@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/fondopantalladelete">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+
+        <TextView
+            android:id="@+id/bienvenidoadmin"
+            android:layout_width="316dp"
+            android:layout_height="99dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/bit"
+            android:gravity="center"
+            android:text="@string/deleteusuario"
+            android:textAlignment="center"
+            android:textColor="#FAFAFA"
+            android:textSize="35sp" />
+
+        <EditText
+            android:id="@+id/iduser"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autofillHints=""
+            android:textColorHint="@color/black"
+            android:ems="10"
+            android:textSize="20sp"
+            android:hint="@string/id_usuario"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:fontFamily="@font/bit"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/userU"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autofillHints=""
+            android:textColorHint="@color/black"
+            android:ems="10"
+            android:hint="@string/nombreusuario_hint"
+            android:inputType="text"
+            android:textSize="20sp"
+            android:minHeight="48dp"
+            android:fontFamily="@font/bit"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/buttonsend"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:backgroundTint="#9D1711"
+            android:fontFamily="@font/bit"
+            android:text="@string/buttonsend" />
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
