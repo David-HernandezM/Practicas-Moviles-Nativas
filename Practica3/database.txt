@@ -1,0 +1,54 @@
+CREATE DATABASE sistemausuarios CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+USE sistemausuarios ;
+
+-- Create table usuario
+
+CREATE TABLE usuario (
+	id_usuario INT (11) PRIMARY KEY AUTO_INCREMENT,
+	nombre VARCHAR(64) NOT NULL,
+	apellidoP VARCHAR(64) NOT NULL,
+	apellidoM VARCHAR(64) NOT NULL,
+	correo VARCHAR(64) NOT NULL,
+	userU VARCHAR(64) NOT NULL,
+	passwordU VARCHAR(128) NOT NULL,
+	fecha_creacion TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	edad INT NOT NULL,
+	genero VARCHAR(64) NOT NULL
+    
+);
+
+-- Creacion de la tabla de roles
+
+CREATE TABLE  rol (
+	id_rol INT(11) PRIMARY KEY AUTO_INCREMENT,
+	nombre VARCHAR(64) NOT NULL UNIQUE
+    
+);
+
+-- Creacion de tabla intermedia  para la relación muchos a muchos entre usuarios y roles
+
+CREATE TABLE usuario_rol (
+	id_usuario INT(11),
+	id_rol INT(11),
+	PRIMARY KEY (id_usuario,id_rol),
+	FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario),
+	FOREIGN KEY (id_rol) REFERENCES rol(id_rol)
+);
+    
+-- Insercion de datos en la tabla rol
+INSERT INTO rol (nombre) VALUES ('ROLE_ADMIN'), ('ROLE_USER');
+
+
+-- OTORGA PERMISOS al admin sobre la base de datos practica2
+GRANT ALL PRIVILEGES ON sistemausuarios.* TO 'admin'@'localhost';
+
+-- Aplicar cambios
+FLUSH PRIVILEGES;
+
+CREATE TABLE imagenes ( id INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(255), imagen BLOB, id_usuario INT, FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario) );
+
+
+//////////////////////////////////////////////////
+-- Crea el usuario admin con la contrasenia admin
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
