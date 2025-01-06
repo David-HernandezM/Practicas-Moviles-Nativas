@@ -52,3 +52,19 @@ CREATE TABLE imagenes ( id INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(255), 
 //////////////////////////////////////////////////
 -- Crea el usuario admin con la contrasenia admin
 CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
+
+--Creacion tabla historial
+
+CREATE TABLE IF NOT EXISTS search ( id_search INTEGER PRIMARY KEY AUTOINCREMENT, -- ID único para la búsqueda search_query TEXT NOT NULL, -- Término de búsqueda search_date INTEGER NOT NULL, -- Fecha de la búsqueda (usaremos timestamp) id_usuario INTEGER, -- ID del usuario (clave externa) FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario) -- Relación con la tabla usuario );
+
+
+-- Creacion tabla favoritos
+
+CREATE TABLE favoritos (
+    id_favorito INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT NOT NULL,
+    api_url VARCHAR(255) NOT NULL,
+    api_respuesta TEXT NOT NULL,
+    fecha_guardado DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario) ON DELETE CASCADE
+);
