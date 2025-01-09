@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondopantalla3">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="316dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/datos_hint"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:translationX="0dp"
+            android:fontFamily="@font/bit"
+            android:translationY="100dp" />
+
+        <EditText
+            android:id="@+id/usuarioU"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autofillHints="username"
+            android:ems="10"
+            android:inputType="text"
+            android:textColorHint="@color/black"
+            android:minHeight="48dp"
+            android:textSize="20sp"
+            android:hint="@string/nombreusuario_hint"
+            android:layout_marginTop="150dp"
+            android:fontFamily="@font/bit" />
+
+        <TextView
+            android:id="@+id/textViewpassword"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:text="@string/password"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/bit" />
+
+        <EditText
+            android:id="@+id/passwordU"
+            android:layout_width="351dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autofillHints="password"
+            android:ems="10"
+            android:hint="@string/password_hint"
+            android:textColorHint="@color/black"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/bit" />
+        <Button
+            android:id="@+id/buttonSend2"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:text="@string/buttonsend"
+            android:backgroundTint="#136975"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/bit" />
+
+
+    </LinearLayout>
+</RelativeLayout>

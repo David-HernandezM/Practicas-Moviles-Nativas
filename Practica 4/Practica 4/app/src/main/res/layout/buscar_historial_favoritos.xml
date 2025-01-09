@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fondobuscar">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingDefaultResource,UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+
+            <TextView
+                android:id="@+id/readdatauser"
+                android:layout_width="332dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/bit"
+                android:gravity="center"
+                android:text="@string/buscar_favs"
+                android:textAlignment="center"
+                android:textColor="#040000"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/iduser"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:fontFamily="@font/bit"
+                android:hint="@string/id_usuario"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textSize="20sp"
+                android:textColorHint="@color/black" />
+
+            <EditText
+                android:id="@+id/userU"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:fontFamily="@font/bit"
+                android:hint="@string/nombreusuario_hint"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textSize="20sp"
+                android:textColorHint="@color/black" />
+
+            <EditText
+                android:id="@+id/nombre"
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:autofillHints="name"
+                android:ems="10"
+                android:fontFamily="@font/bit"
+                android:hint="@string/nombre"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textSize="20sp"
+                android:textColorHint="@color/black" />
+
+            <EditText
+                android:id="@+id/apellidoP"
+                android:layout_width="353dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:autofillHints="name"
+                android:textColorHint="@color/black"
+                android:ems="10"
+                android:hint="@string/aPaterno"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:fontFamily="@font/bit"
+                android:textSize="20sp"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/buttonsendfav"
+                android:layout_width="138dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#78241F"
+                android:fontFamily="@font/bit"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:text="@string/buttonsend" />
+
+            <TextView
+                android:layout_width="332dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:textSize="25sp"
+                android:textColor="#040000"
+                android:fontFamily="@font/bit"
+                android:text="@string/favoritos_1"
+                android:gravity="center"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewFavoritos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp" />
+
+            <TextView
+                android:layout_width="332dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:textSize="25sp"
+                android:textColor="#040000"
+                android:fontFamily="@font/bit"
+                android:text="@string/Historial"
+                android:gravity="center"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewHistorial"
+                android:layout_width="match_parent"
+                android:layout_marginTop="50dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>
