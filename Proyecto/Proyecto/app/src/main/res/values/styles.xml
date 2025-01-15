@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:fontFamily">@font/bit</item>
+    </style>
+
+    <style name="AppRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonCompat">@drawable/radiobutton</item>
+    </style>
+
+    <style name="CustomToolbarMenu" parent="TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textColor">@color/black</item> <!-- Cambia el color del texto -->
+    </style>
+
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/fondoadmin">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+
+            <TextView
+                android:id="@+id/bienvenidoadmin"
+                android:layout_width="316dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:gravity="center"
+                android:text="@string/bienvenidoadmin"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/bit"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/textViewIdUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/id_usuariotexto"
+                android:textSize="25sp"
+                android:layout_marginTop="70dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/bit"
+                android:padding="8dp"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@android:drawable/ic_menu_camera"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:contentDescription="@string/imagen_de_usuario"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/crud"
+                android:layout_width="316dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:gravity="start"
+                android:text="@string/elige"
+                android:textColor="@color/black"
+                android:fontFamily="@font/bit"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/modificadatos"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#6B09AF"
+                android:text="@string/modificadatos"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/bit"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/buttoncreate"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#9C27B0"
+                android:text="@string/crear_usuario"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/bit"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/buttonread"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#3F51B5"
+                android:text="@string/buttonread"
+                android:fontFamily="@font/bit"
+                android:textSize="20sp"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/buttonfavshist"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#03A9F4"
+                android:text="@string/historial"
+                android:fontFamily="@font/bit"
+                android:textSize="20sp"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/updateuser"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#009688"
+                android:fontFamily="@font/bit"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:text="@string/actualizardatos" />
+
+            <Button
+                android:id="@+id/buttondelete"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFC107"
+                android:text="@string/eliminar_usuario"
+                android:fontFamily="@font/bit"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/cerrarsesion"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E91E63"
+                android:text="@string/cerrarsesion"
+                android:fontFamily="@font/bit"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:layout_gravity="center" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

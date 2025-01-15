@@ -1,0 +1,47 @@
+<?php
+// Conexión a la base de datos
+$conn = new mysqli("localhost", "root", "", "practica2");
+
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+// Obtener el parámetro de id_usuario (este es obligatorio)
+$id_usuario = isset($_GET['id_usuario']) ? $_GET['id_usuario'] : null;
+
+// Obtener el parámetro de userU (este puede ser nulo)
+$userU = isset($_GET['userU']) ? $_GET['userU'] : null;
+
+// Verificar si id_usuario está presente, ya que es obligatorio
+if ($id_usuario === null) {
+    echo json_encode(["error" => "El parámetro 'id_usuario' es obligatorio."]);
+    exit();  // Detener el script si no se pasa el id_usuario
+}
+
+// Preparar la consulta SQL base
+$sql = "SELECT * FROM usuario WHERE id_usuario = " . $conn->real_escape_string($id_usuario);
+
+// Filtrar por userU si se proporcionó
+if ($userU !== null && $userU !== '') {
+    $sql .= " AND userU LIKE '%" . $conn->real_escape_string($userU) . "%'";
+}
+
+// Ejecutar la consulta
+$result = $conn->query($sql);
+
+// Verificar si se obtuvieron resultados
+if ($result->num_rows > 0) {
+    $usuarios = array();
+    while ($row = $result->fetch_assoc()) {
+        $usuarios[] = $row;
+    }
+    // Devolver los resultados en formato JSON
+    echo json_encode($usuarios);
+} else {
+    echo json_encode([]); // Si no se encuentran resultados, devolver un array vacío
+}
+
+// Cerrar la conexión
+$conn->close();
+?>

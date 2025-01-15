@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Practica2"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".api.RecomendacionAdapter"
+            android:exported="false"
+            android:label="@string/title_activity_recomendacion_adapter"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".api.RecomendacionesActivity"
+            android:exported="false"
+            android:label="@string/title_activity_recomendaciones"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".BAdapterSearch"
+            android:exported="false"
+            android:label="@string/title_activity_badapter_search"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".BAdapterFav"
+            android:exported="false"
+            android:label="@string/title_activity_badapter_fav"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".HistorialFavsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_historial_favs"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".api.FavoriteActivity"
+            android:exported="false"
+            android:label="@string/title_activity_favorite"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".api.FavoriteAdapter"
+            android:exported="false"
+            android:label="@string/title_activity_favorite_adapter"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".FavoriteManager"
+            android:exported="false"
+            android:label="@string/title_activity_favorite_manager"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".api.EpisodeAdapter"
+            android:exported="false"
+            android:label="@string/title_activity_episode_adapter"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".api.SeasonAdapter"
+            android:exported="false"
+            android:label="@string/title_activity_season_adapter"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".api.ShowDetailActivity"
+            android:exported="false"
+            android:label="@string/title_activity_show_detail"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".MyCookieManager"
+            android:exported="false"
+            android:label="@string/title_activity_my_cookie_manager"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".api.searchdb.AppDatabase"
+            android:exported="false"
+            android:label="@string/title_activity_app_database"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".api.searchdb.SearchHistory"
+            android:exported="false"
+            android:label="@string/title_activity_search_history"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".api.ShowAdapter"
+            android:exported="false"
+            android:label="@string/title_activity_show_adapter"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".api.TvMazeApi"
+            android:exported="false"
+            android:label="@string/title_activity_tv_maze_api"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".api.PrincipalProjectActivity"
+            android:exported="false"
+            android:label="@string/title_activity_principal_project"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".WebViewerUser"
+            android:exported="false"
+            android:label="@string/title_activity_webvieweruser"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".UpdateOnlyUserActivity"
+            android:exported="false"
+            android:label="@string/title_activity_update_only_user"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".CreateUserActivity"
+            android:exported="false"
+            android:label="@string/title_activity_create_user"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".VistaUsuarioActivity"
+            android:exported="false"
+            android:label="@string/title_activity_vista_usuario"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".VistaAdminActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DeleteUserActivity"
+            android:exported="false"
+            android:label="@string/title_activity_delete_user"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".ReadUserActivity"
+            android:exported="false"
+            android:label="@string/title_activity_read_user"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".UpdateUserActivity"
+            android:exported="false"
+            android:label="@string/title_activity_update_user"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".ButtonActivity"
+            android:exported="false"
+            android:label="@string/title_activity_button"
+            android:theme="@style/Theme.Practica2" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:label="@string/title_activity_register"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Practica2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

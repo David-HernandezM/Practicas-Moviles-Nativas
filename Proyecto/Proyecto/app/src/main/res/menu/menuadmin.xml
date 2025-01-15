@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="@string/crear_usuario"
+        app:showAsAction="never"
+        android:id="@+id/createuser"/>
+
+    <item android:title="@string/cambiar_datos_de_usuario"
+        app:showAsAction="never"
+        android:id="@+id/updateuser"/>
+
+    <item android:title="@string/leer_datos"
+        android:icon="@drawable/createicon"
+        app:showAsAction="never"
+        android:id="@+id/readdatauser"/>
+
+    <item android:title="@string/eliminar_usuario"
+        app:showAsAction="never"
+        android:id="@+id/deleteuser"/>
+</menu>
+

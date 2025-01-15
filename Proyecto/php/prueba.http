@@ -1,0 +1,15 @@
+PUT http://localhost/practica2/update.php
+Content-Type: application/json
+
+{
+  "id_usuario": 19,
+  "nombre": "Ariana",
+  "apellidoP": "Fuentes",
+  "apellidoM": "Vvvvv",
+  "userU": "ariana123",
+  "passwordU": "123456",
+  "edad": 23,
+  "correo": "smash@gmail.com",
+  "genero": "femenino",
+  "rol": 1
+}

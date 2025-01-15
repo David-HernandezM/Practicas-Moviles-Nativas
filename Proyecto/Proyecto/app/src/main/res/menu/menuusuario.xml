@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/cambiar_datos"
+        android:titleTextAppearance="@style/CustomToolbarMenu"
+        android:title="@string/cambiar_datos" />
+    <item
+        android:id="@+id/navegador"
+        android:titleTextAppearance="@style/CustomToolbarMenu"
+        android:title="@string/navegador" />
+    <item
+        android:id="@+id/favoritos"
+        android:titleTextAppearance="@style/CustomToolbarMenu"
+        android:title="@string/favoritos" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:titleTextAppearance="@style/CustomToolbarMenu"
+        android:title="@string/cerrar_sesi_n" />
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/buttonsearch"
+        android:title="@string/buscar"
+        app:showAsAction="always" />
+</menu>
