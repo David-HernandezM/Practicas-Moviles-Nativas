@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Ejemplo Firebase</string>
+    <string name="bd">Contador en Tiempo Real</string>
+</resources>
