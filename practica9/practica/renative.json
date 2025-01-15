@@ -1,0 +1,15 @@
+{
+    "$schema": ".rnv/schema/rnv.project.json",
+    "extendsTemplate": "@rnv/template-starter/renative.json",
+    "projectName": "practica",
+    "workspaceID": "rnv",
+    "templateConfig": {
+        "name": "@rnv/template-starter",
+        "version": "1.9.0"
+    },
+    "defaults": {
+        "supportedPlatforms": [
+            "androidwear"
+        ]
+    }
+}
